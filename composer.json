@@ -1,0 +1,13 @@
+{
+  "name": "ary/ternate-awesome",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Ary\\TernateAwesome\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.4",
+    "ext-pdo": "*"
+  }
+}
