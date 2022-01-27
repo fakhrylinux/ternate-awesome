@@ -1,6 +1,6 @@
 <?php
 
-namespace Ary\TernateAwesome\Config;
+namespace Fakhry\Informatika\Karyawan\TernateAwesome\Config;
 
 use PDO;
 

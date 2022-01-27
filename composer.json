@@ -1,9 +1,9 @@
 {
-  "name": "ary/ternate-awesome",
+  "name": "fakhry/ternate-awesome",
   "type": "project",
   "autoload": {
     "psr-4": {
-      "Ary\\TernateAwesome\\": "src/"
+      "Fakhry\\Informatika\\Karyawan\\TernateAwesome\\": "src/"
     }
   },
   "require": {

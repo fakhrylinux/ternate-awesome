@@ -1,8 +1,8 @@
 <?php
 
-namespace Ary\TernateAwesome\Repository;
+namespace Fakhry\Informatika\Karyawan\TernateAwesome\Repository;
 
-use Ary\TernateAwesome\Model\Post;
+use Fakhry\Informatika\Karyawan\TernateAwesome\Model\Post;
 use PDO;
 
 class PostRepository
@@ -10,9 +10,6 @@ class PostRepository
     public array $post = array();
     private PDO $connection;
 
-    /**
-     * @param PDO $connection
-     */
     public function __construct(PDO $connection)
     {
         $this->connection = $connection;
@@ -46,7 +43,7 @@ class PostRepository
         }
     }
 
-    function findAll(): array
+    function findAll()
     {
         $sql = "SELECT id, title, image, caption FROM post";
         $statement = $this->connection->prepare($sql);

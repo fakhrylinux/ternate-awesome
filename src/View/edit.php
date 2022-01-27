@@ -1,7 +1,7 @@
 <pre>
 <?php
 
-use Ary\TernateAwesome\Helper\Helper;
+use Fakhry\Informatika\Karyawan\TernateAwesome\Helper\Helper;
 
 print_r($posts);
 echo "hello";

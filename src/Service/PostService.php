@@ -1,9 +1,9 @@
 <?php
 
-namespace Ary\TernateAwesome\Service;
+namespace Fakhry\Informatika\Karyawan\TernateAwesome\Service;
 
-use Ary\TernateAwesome\Model\Post;
-use Ary\TernateAwesome\Repository\PostRepository;
+use Fakhry\Informatika\Karyawan\TernateAwesome\Model\Post;
+use Fakhry\Informatika\Karyawan\TernateAwesome\Repository\PostRepository;
 
 class PostService
 {
@@ -15,7 +15,7 @@ class PostService
         $this->postRepository = $postRepository;
     }
 
-    function retrievePost(): array
+    function retrievePost()
     {
         return $this->postRepository->findAll();
     }
@@ -23,11 +23,6 @@ class PostService
     function retrievePostById($id)
     {
         $postArr = $this->postRepository->findById($id);
-//        $postArr = [
-//            'title' => $post->getTitle(),
-//            'image' => $post->getImage(),
-//            'caption' => $post->getCaption(),
-//        ];
         return $postArr;
     }
 

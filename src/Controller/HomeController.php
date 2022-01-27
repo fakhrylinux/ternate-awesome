@@ -1,11 +1,11 @@
 <?php
 
-namespace Ary\TernateAwesome\Controller;
+namespace Fakhry\Informatika\Karyawan\TernateAwesome\Controller;
 
-use Ary\TernateAwesome\App\View;
-use Ary\TernateAwesome\Config\Database;
-use Ary\TernateAwesome\Repository\PostRepository;
-use Ary\TernateAwesome\Service\PostService;
+use Fakhry\Informatika\Karyawan\TernateAwesome\App\View;
+use Fakhry\Informatika\Karyawan\TernateAwesome\Config\Database;
+use Fakhry\Informatika\Karyawan\TernateAwesome\Repository\PostRepository;
+use Fakhry\Informatika\Karyawan\TernateAwesome\Service\PostService;
 
 class HomeController
 {
@@ -21,15 +21,19 @@ class HomeController
     public function index()
     {
         $retrievePost = $this->postService->retrievePost();
-
-        foreach ($retrievePost as $post) {
-            $posts[] = [
-                'id' => $post->getId(),
-                'title' => $post->getTitle(),
-                'image' => $post->getImage(),
-                'caption' => $post->getCaption()
-            ];
+        if ($retrievePost != null) {
+            foreach ($retrievePost as $post) {
+                $posts[] = [
+                    'id' => $post->getId(),
+                    'title' => $post->getTitle(),
+                    'image' => $post->getImage(),
+                    'caption' => $post->getCaption()
+                ];
+            }
+        } else {
+            $posts[] = "";
         }
+
         View::render('index', $posts);
     }
 
@@ -73,12 +77,6 @@ class HomeController
     {
 
         $postArr = $this->postService->retrievePostById((int)$id);
-//        $post = [
-////            'id' => $postRs->getId(),
-//            'title' => $postRs->getTitle(),
-//            'image' => $postRs->getImage(),
-//            'caption' => $postRs->getCaption()
-//        ];
         View::render('edit', $postArr);
     }
 

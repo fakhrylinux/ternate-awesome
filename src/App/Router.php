@@ -1,6 +1,6 @@
 <?php
 
-namespace Ary\TernateAwesome\App;
+namespace Fakhry\Informatika\Karyawan\TernateAwesome\App;
 
 class Router
 {

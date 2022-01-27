@@ -1,6 +1,6 @@
 <?php
 
-namespace Ary\TernateAwesome\Helper;
+namespace Fakhry\Informatika\Karyawan\TernateAwesome\Helper;
 
 class Helper
 {

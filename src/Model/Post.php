@@ -1,6 +1,6 @@
 <?php
 
-namespace Ary\TernateAwesome\Model;
+namespace Fakhry\Informatika\Karyawan\TernateAwesome\Model;
 
 class Post
 {
